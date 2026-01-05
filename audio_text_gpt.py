@@ -90,12 +90,12 @@ def pronounce_response(text):
 
 
 if __name__ == '__main__':
-    # command_file = record()
-    command_file = RECORD_FILE
-    # transcription = transcribe(command_file=command_file)
-    with open(TRANSCRIBED_FILE, 'r') as file:
-        transcription = file.read().strip()
-    # chatgpt_response = ask_gpt(transcription=transcription)
-    with open(RESPONSE_TEXT, 'r') as file:
-        chatgpt_response = file.read().strip()
+    command_file = record()
+    # command_file = RECORD_FILE
+    transcription = transcribe(command_file=command_file)
+    # with open(TRANSCRIBED_FILE, 'r') as file:
+    #     transcription = file.read().strip()
+    chatgpt_response = ask_gpt(transcription=transcription)
+    # with open(RESPONSE_TEXT, 'r') as file:
+    #     chatgpt_response = file.read().strip()
     pronounce_response(text=chatgpt_response)

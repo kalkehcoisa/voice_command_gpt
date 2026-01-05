@@ -2,4 +2,7 @@
 *.keys
 *.venv
 
-command.wav
+*.wav
+*.mp3
+command.txt
+gpt_response.txt
